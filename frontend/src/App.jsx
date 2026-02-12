@@ -2,6 +2,7 @@ import React from "react";
 import Login from "./pages/Login";
 import UserList from "./pages/UserList";
 import AuditLogs from "./pages/AuditLogs";
+import Welcome from "./pages/Welcome";
 import {
   BrowserRouter as Router,
   Routes,
@@ -23,8 +24,9 @@ function App() {
           path="/users"
           element={
             <ProtectedRoute>
+
               <UserList />
-           </ProtectedRoute>
+            </ProtectedRoute>
           }
         />
         <Route
@@ -32,9 +34,10 @@ function App() {
           element={
             <ProtectedRoute>
               <AuditLogs />
-             </ProtectedRoute>
+              </ProtectedRoute>
           }
         />
+<Route path="/welcome" element={ <ProtectedRoute> <Welcome /> </ProtectedRoute> } />
       </Routes>
     </Router>
   );
