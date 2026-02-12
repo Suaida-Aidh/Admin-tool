@@ -5,7 +5,7 @@ import jwt from 'jsonwebtoken'
 let users =[{
     id: 1,
     username:'admin',
-    password: 'admin123',
+    password: 'pbkdf2_sha256$720000$VtX7nYk2Qm8pR4dL$6fM9bVxG7yQpK1zLwE3tY5uH8jN0rS2aB4cD6eF9gH0=',
     role: 'ADMIN',
     createdAt: new Date().toISOString()
 }]
